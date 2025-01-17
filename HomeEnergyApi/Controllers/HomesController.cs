@@ -26,10 +26,10 @@ namespace HomeEnergyUsageApi.Controllers
         }
 
         [HttpPost]
-        public Home Post([FromBody] Home home)
+        public IActionResult Post([FromBody] Home home)
         {
             homesList.Add(home);
-            return home;
+            return Created($"/location/{homesList[home.id]}", home);
         }
 
         [HttpPut("{id}")]
