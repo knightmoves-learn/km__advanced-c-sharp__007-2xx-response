@@ -29,7 +29,7 @@ namespace HomeEnergyUsageApi.Controllers
         public IActionResult Post([FromBody] Home home)
         {
             homesList.Add(home);
-            return Created($"/location/{home.id}", home);
+            return Created($"/Homes/{home.id}", home);
         }
 
         [HttpPut("{id}")]
