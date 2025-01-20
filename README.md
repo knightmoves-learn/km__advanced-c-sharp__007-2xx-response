@@ -13,7 +13,7 @@ In `HomeEnergyApi/Controllers/HomesController.cs`...
 - Modify the POST method `CreateHome()`
   - On success, this method should return the HTTP response `201: Created`
   - This method should respond with the home being added.
-  - This method should contain in its response headers the URI `Location` the home being added is created at.
+  - This method should contain in its response headers the `Location` the home being added is created at.
     - Hint: Unlike the code examples in the lecture, you cannot assume homesList is sorted by `id`. The `Home` with an `id` of 2, may not necessarily be the `Home` at `homesList[2]`
   - This method should still add the home from the body of the POST request to the static list `homesList`
 - Any other existing methods or properties on `HomesController.cs` should NOT be changed.
